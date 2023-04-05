@@ -18,6 +18,9 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
-           mkdir buatanAction
-           cd buatanAction
-           touch fileSaya.txt
+          cd prj
+          rm -rf api2
+          git clone https://github.com/ALTA-BE16-iqbal/api2.git
+          ls -al
+          cd api2
+          go run main.go
